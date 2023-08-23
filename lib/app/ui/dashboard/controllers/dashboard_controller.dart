@@ -8,11 +8,11 @@ import 'package:zainiklabassignment/app/ui/inbox/views/inbox_view.dart';
 import 'package:zainiklabassignment/app/ui/shop/views/shop_view.dart';
 
 class DashboardController extends GetxController {
-  final currentIndex = 0.obs;
+  final currentIndex = 1.obs;
 
   final List<Widget> _widgetOptions = <Widget>[
     const HomeView(),
-    const ExploreView(),
+      const ExploreView(),
     const InboxView(),
     const ShopView(),
   ];

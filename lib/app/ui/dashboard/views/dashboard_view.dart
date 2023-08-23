@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 
 
 import 'package:get/get.dart';
+import 'package:zainiklabassignment/app/utils/appConstants/resources.dart';
 
 import '../../../utils/app_colors.dart';
-import '../../../utils/constants/resources.dart';
+
 import '../controllers/dashboard_controller.dart';
 
 class DashboardView extends GetView<DashboardController> {
@@ -15,7 +16,6 @@ class DashboardView extends GetView<DashboardController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // Obx(() => controller.widgetOptions[controller.currentIndex.value]),
       body: PageStorage(
         bucket: bucket,
         child: Obx(() => controller.widgetOptions[controller.currentIndex.value]),

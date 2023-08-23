@@ -3,7 +3,7 @@
 import 'package:get/get.dart';
 
 class DashboardController extends GetxController {
-  final currentIndex = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +18,4 @@ class DashboardController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void onChangePage(int index) => currentIndex.value = index;
 }

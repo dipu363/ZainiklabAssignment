@@ -23,7 +23,7 @@ class EditTextFieldWidget extends StatelessWidget {
       controller: controller,
       validator: (value) => validator(value),
       decoration: InputDecoration(
-        prefixIcon: const Icon(Icons.search,size: 30,),
+        prefixIcon: const Icon(Icons.search_rounded),
         prefixIconColor: secondaryColor.withOpacity(.3),
         fillColor: searchBoxColor,
           filled: true,

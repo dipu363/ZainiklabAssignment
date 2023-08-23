@@ -40,7 +40,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.EXPLORE,
-      page: () => const ExploreView(),
+      page: () =>   const ExploreView(),
       binding: ExploreBinding(),
     ),
     GetPage(
