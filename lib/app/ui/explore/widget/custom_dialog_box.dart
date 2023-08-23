@@ -132,7 +132,7 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
                 decoration: BoxDecoration(
                     color: searchBoxColor,
                     border: Border.all(color: searchBoxColor),
-                    borderRadius: BorderRadius.circular(10)),
+                    borderRadius: BorderRadius.circular(20)),
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(

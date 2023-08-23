@@ -12,7 +12,7 @@ class DashboardController extends GetxController {
 
   final List<Widget> _widgetOptions = <Widget>[
     const HomeView(),
-      const ExploreView(),
+    ExploreView(),
     const InboxView(),
     const ShopView(),
   ];

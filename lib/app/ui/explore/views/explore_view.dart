@@ -5,28 +5,32 @@ import 'package:get/get.dart';
 import 'package:zainiklabassignment/app/ui/explore/controllers/explore_controller.dart';
 import 'package:zainiklabassignment/app/ui/explore/widget/custom_dialog_box.dart';
 import 'package:zainiklabassignment/app/ui/explore/widget/edittext_field_widget.dart';
+import 'package:zainiklabassignment/app/utils/app_colors.dart';
 
 class ExploreView extends StatelessWidget {
-  const ExploreView({Key? key}) : super(key: key);
+  ExploreView({Key? key}) : super(key: key);
+
+  final ExploreController controller = Get.put(ExploreController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding:
+            const EdgeInsets.only(left: 16.0, right: 16, top: 50, bottom: 16),
         child: Column(
           children: [
             EditTextFieldWidget(
               controller: TextEditingController(),
               validator: (String? value) {},
-              hintext: 'Search Swipexyz.',
+              hintext: 'Search Swipexyz...',
             ),
-            30.verticalSpace,
-            GetBuilder<ExploreController>(builder: (controller) {
-              return Expanded(
-                  child: SingleChildScrollView(
-                child: StaggeredGrid.count(
+            20.verticalSpace,
+            Expanded(
+                child: Obx(
+              () => controller.isLoading.value == false
+                  ? SingleChildScrollView(
+                      child: StaggeredGrid.count(
                         crossAxisCount: 3,
                         mainAxisSpacing: 2,
                         crossAxisSpacing: 2,
@@ -94,9 +98,17 @@ class ExploreView extends StatelessWidget {
                           }
                         }),
                       ),
-
-              ));
-            }),
+                    )
+                  : const Center(
+                      child: SizedBox(
+                        height: 60,
+                        width: 60,
+                        child: CircularProgressIndicator(
+                          color: primaryColor,
+                        ),
+                      ),
+                    ),
+            )),
           ],
         ),
       ),
